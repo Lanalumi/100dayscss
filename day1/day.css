@@ -1,0 +1,106 @@
+/* // delete the following line if no text is used
+// edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.gradiant {
+  background: linear-gradient(45deg, #4240A1 0%, #4dbfc8 100%);
+
+}
+
+.one {
+  background-color: white;
+  width: 25px;
+  height: 100px;
+  display: inline-block;
+  position: relative;
+  box-shadow: rgba(0,0,0,0.1) 0px 0px 8px;
+  border-radius: 4px;
+}
+
+.one:before {
+  content:"";
+  background-color: white;
+  position: absolute;
+  width: 25px;
+  height: 50px;
+  left: -20px;
+  transform: rotate(45deg);
+  z-index: -1;
+  border-radius: 4px;
+
+}
+
+.zero {
+  background-color: white;
+  width: 80px;
+  height: 90px;
+  display: inline-block;
+  position:relative;
+  border-radius: 100%;
+  left: -5px;
+}
+
+.zero_2 {
+  background-color: white;
+  width: 80px;
+  height: 90px;
+  display: inline-block;
+  position:relative;
+  border-radius: 100%;
+  left: -25px;
+}
+
+.zero_inside {
+  background: linear-gradient(45deg, #4240A1 0%, #4dbfc8 100%);
+  width: 40px;
+  height: 45px;
+  display: flex ;
+  border-radius: 100%;
+  margin: 25%;
+  
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;   
+}
+
+.text {
+  font-size: 85px;
+  font-family: Luminari, fantasy ;
+  color: white;
+  font-style: bold;
+}
+
+.text_2 {
+  font-size: 30px;
+  font-family: Luminari, fantasy;
+  color: white;
+  font-style: bold;
+}
