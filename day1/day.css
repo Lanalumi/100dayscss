@@ -63,7 +63,7 @@
   display: inline-block;
   position:relative;
   border-radius: 100%;
-  left: -5px;
+  left: -15px;
 }
 
 .zero_2 {
@@ -73,7 +73,8 @@
   display: inline-block;
   position:relative;
   border-radius: 100%;
-  left: -25px;
+  left: -30px;
+  box-shadow: rgba(0,0,0,0.1) 0px 0px 8px;
 }
 
 .zero_inside {
