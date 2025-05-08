@@ -66,25 +66,22 @@
   left: -15px;
 }
 
-.zero_2 {
-  background-color: white;
-  width: 80px;
-  height: 90px;
-  display: inline-block;
-  position:relative;
-  border-radius: 100%;
+.zero--2 {
   left: -30px;
   box-shadow: rgba(0,0,0,0.1) 0px 0px 8px;
 }
 
-.zero_inside {
+.zero:before {
+  content: "";
   background: linear-gradient(45deg, #4240A1 0%, #4dbfc8 100%);
-  width: 40px;
-  height: 45px;
-  display: flex ;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 50%;
   border-radius: 100%;
-  margin: 25%;
-  
+  margin-top: -25%;
+  margin-left: -25%;  
 }
 
 .bottom {
@@ -97,11 +94,9 @@
   font-family: Luminari, fantasy ;
   color: white;
   font-style: bold;
+  text-transform: uppercase;
 }
 
-.text_2 {
+.text--2 {
   font-size: 30px;
-  font-family: Luminari, fantasy;
-  color: white;
-  font-style: bold;
 }
