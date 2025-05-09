@@ -1,0 +1,194 @@
+/* // delete the following line if no text is used
+// edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+    color: #333;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: black;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.circle{
+    background-color: lightskyblue;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative
+    /* o que "ta saindo para fora"/overflowing */
+}
+
+.sun {
+    background-color: yellow;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: 10px;
+    left: 20px;
+    position: absolute;
+    transform-origin: 150% 200%;
+    animation: sun 9s linear infinite;
+}
+
+.ground {
+    background-color: rgb(250, 177, 69);
+    width: 400px;
+    height: 80px;
+    bottom: 0;
+    position: absolute;
+}
+
+.pyramid-left {
+    position: absolute;
+    background-color: beige;
+    width: 113px;
+    height: 57px;
+    clip-path: polygon(0% 100%, 70% 100%, 50% 0%);
+    top: 70px;
+    left: 35px;
+    animation: pyramid-shading 9s linear infinite;
+}
+
+.pyramid-right{
+    position: absolute;
+    background-color: beige;
+    width: 75px;
+    height:57px;
+    clip-path: polygon(30% 100%, 100% 100%, 0% 0%);
+    top: 70px;
+    left: 91px;
+    animation: pyramid-shading 9s linear infinite reverse;
+}
+
+.shadow{
+    position: absolute;
+    background: rgba(0, 0, 0, 0.2);
+    transform-origin: 50% 0%;
+    height: 30px;
+    width: 310px;
+    top: 120px;
+    left: -73px;
+    z-index: 2;
+    clip-path: polygon(115px 0%, 231px 0%, 80% 100%);
+    animation: shadow-on-the-floor 9s linear infinite;
+}
+
+.sky{
+    position:absolute;
+    background: black;
+    top: -10px;
+    width: 150%;
+    height: 150%;
+    left:-10%;
+    z-index: 1;
+    opacity: 0;
+    animation: sky-turn-black 15s linear infinite;
+
+}
+
+@keyframes sun {
+    0%{
+        transform: rotate(0deg);
+    }
+    16%{
+        transform: rotate(30deg);
+    }
+    30%{
+        transform: rotate(60deg);
+    }
+    50%{
+        transform: rotate(90deg)
+    }
+    66%{
+        transform: rotate(120deg)
+    }
+    90%{
+        transform: rotate(150deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pyramid-shading {
+    0% {
+        background: #272c34;
+    }
+    
+    10% {
+        background: #f4f4f4;
+    }
+    
+    60% {
+        background: #dddada;
+    }
+    
+    100% {
+        background: #272c3488;
+    }
+}
+
+@keyframes shadow-on-the-floor {
+  0% {
+    transform: scaleY(0);
+    clip-path: polygon(115px 0%, 231px 0%, 100% 100%);
+  }
+
+  16% {
+    transform: scaleY(1);
+    clip-path: polygon(115px 0%, 231px 0%, 80% 100%);
+  }
+
+  30% {
+    transform: scaleY(0.4);
+  }
+
+  50% {
+    transform: scaleY(1);
+
+  }
+  70%{
+    transform: scaleY(0.4)
+  }
+  75%{
+    transform: scaleY(0.2);
+  }
+
+  100% {
+    transform: scaleY(0);
+    clip-path: polygon(115px 0%, 231px 0%, 0% 100%);
+  }
+}
+
+@keyframes sky-turn-black {
+    0%{
+        opacity: 0;
+    }
+    65%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}    
