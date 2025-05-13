@@ -1,0 +1,106 @@
+/* // delete the following line if no text is used
+// edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #1cb9be;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background-color: #ffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -50px;
+  margin-top:-50px;
+}
+
+.circle--big {
+  width: 150px;
+  height: 150px;
+  margin-left: -75px;
+  margin-top: -75px;
+  animation: circle--big 3s infinite alternate;
+}
+
+.circle--medium {
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  animation: circle--medium 3s infinite alternate;
+}
+
+.circle--small {
+  width: 50px;
+  height: 50px;
+  margin-left: -25px;
+  margin-top:-25px;
+  animation: circle--small 3s infinite alternate;
+}
+
+
+@keyframes circle--big {
+  0%,
+  10% {
+    transform: scale(0);
+    box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.3);
+  }
+  100%
+ {
+    transform: scale(1);
+    box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+  }
+}
+@keyframes circle--medium{
+  0%,
+  40% {
+    transform: scale(0);
+    box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.3);
+  }
+  100%
+ {
+    transform: scale(1);
+    box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+  }
+}
+
+@keyframes circle--small{
+  0%,
+  70% {
+    transform: scale(0);
+    box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.3);
+  }
+  100%
+  {
+    transform: scale(1);
+    box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+  }
+}
+
