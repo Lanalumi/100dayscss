@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 1</title>
+    <link href="./day5.css" rel="stylesheet"/>
+</head>
+<body>
+    
+</body>
+</html>
+<div class="frame">
+    <div class="center">
+        <header class="header">
+            <div>
+                <h1 class="header--title"> Weekly report</h1>
+                <p class="header--date"> 01. Feb - 07. Feb</p>
+            </div>
+            <div>
+                <span class="header--label">Revenue</span>
+                <p class="header--value"> $ 2000</p>
+            </div>
+        </header>
+        <div class="content">
+            <div class="legendas">
+                <span class="caption caption--red">Views</span>
+                <span class="caption caption--blue">Purchases</span>
+            </div>
+            <div class="chart">
+                <div class="line line--1"></div>
+                <div class="line line--2"></div>
+                <div class="line line--3"></div>
+                <svg viewbox="0 0 260 80">
+                    <polyline fill="none"
+                    stroke="red" 
+                    points="9,46 50,12 90,23 130,11 171,38 211,48 251,19">
+                    </polyline>
+                    <polyline fill="none"
+                    stroke="blue"
+                    points="9,61 50,50 90,65 130,55 171,61 211,74 251,64">
+
+                    </polyline>
+                </svg>
+
+                <div class="circle-wrapper">
+                    <div class="circle circle--red circle--red-mon">
+                        <div class="tooltip">46                       
+                        </div>
+                    </div>
+                    <div class="circle circle--blue circle--blue-mon">
+                        <div class="tooltip">61                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="days">
+            <span class="day">MON</span>
+            </div>
+        </div>
+    </div>
+  </div>
