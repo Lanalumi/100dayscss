@@ -43,14 +43,18 @@
     justify-content: space-between;
     width: 100%;
     padding: 16px;
+    color: #fff;
 }
 
-.header--title {
-    color: #fff;
+.header--title, .header--value {
+    text-transform: uppercase;
     font-size: 14px;
     font-weight: 600;
-    text-transform: uppercase;
-    display: flex;
+}
+
+.header--date, .header--label {
+    font-size: 12px;
+    font-weight: 400;
 }
 
 .content {
@@ -64,6 +68,8 @@
     justify-content: end;
     display: flex;
     gap: 40px;
+    font-size: 10px;
+    text-transform: bold;
 }
 
 .caption{
@@ -72,21 +78,12 @@
 
 .caption::after {
     content: "";
-    height: 4px;
+    height: 3px;
     position: absolute;
-    width: 20px;
+    width: 10px;
     top: calc(50% - 1px);
     border-radius: 2px;
     right: calc(100% + 10px);
-}
-
-.caption--red::after {
-    background-color: red;
-}
-
-.caption--blue::after {
-    background-color: blue;
-    
 }
 
 .chart {
@@ -102,6 +99,7 @@
     background-color: #dedede;
     top: 0;
     left: 0;
+    z-index: -1;
 }
 
 .line--2 {
@@ -112,14 +110,10 @@
     top: 100%;
 }
 
-.circle-wrapper {
-
-}
-
 .circle {
     position: absolute;
-    width: 10px;
-    height: 10px;
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
     top: 41px;
     left: 4px;
@@ -142,26 +136,116 @@
     transition: all .3s ease;
 }
 
+.tooltip--red::after{
+    content:"";
+    position:absolute;
+    left: 3px;
+    top:26px;
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+    border-top: 10px solid rgba(255, 58, 58, 0.74);
+    border-radius:3px;
+}
+
+.tooltip--blue::after{
+    content:"";
+    position:absolute;
+    left: 3px;
+    top:26px;
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+    border-top: 10px solid rgb(52, 52, 252);
+    border-radius:3px;
+}
+
 .circle:hover > .tooltip {
     visibility: visible;
     opacity: 1;
     transform: translateY(0);
 }
 
-.circle--red {
-    background-color: red;
+.circle--red, .caption--red::after {
+    background-color: rgba(255, 58, 58, 0.74);
 }
 
-.circle--blue {
-    background-color: blue;
+.circle--blue, .caption--blue::after {
+    background-color: rgb(52, 52, 252);
 }
 
 .circle--red-mon {
-    top: 41px;
+    top: 45px;
     left: 4px;
 }
 
+.circle--red-tue {
+    top: 10px;
+    left: 47px;
+}
+
+.circle--red-wed {
+    top: 20px;
+    left: 88px;
+}
+
+.circle--red-thur {
+    top: 9px;
+    left: 128px;
+}
+
+.circle--red-fri {
+    top: 36px;
+    left: 170px;
+}
+
+.circle--red-sat {
+    top: 45px;
+    left: 209px;
+}
+.circle--red-sun {
+    top: 17px;
+    left: 248px;
+}
+
 .circle--blue-mon {
-    top: 56px;
+    top: 58px;
     left: 4px;
+}
+
+.circle--blue-tue {
+    top: 48px;
+    left: 47px;
+}
+
+.circle--blue-wed {
+    top: 63px;
+    left: 88px;
+}
+
+.circle--blue-thur {
+    top: 52px;
+    left: 128px;
+}
+
+.circle--blue-fri {
+    top: 59px;
+    left: 170px;
+}
+
+.circle--blue-sat {
+    top: 71px;
+    left: 209px;
+}
+
+.circle--blue-sun {
+    top: 62px;
+    left: 248px;
+}
+
+.days {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(7, 1fr);
+    font-size: 8px;
+    text-align: center;
+    text-transform: uppercase;
 }
