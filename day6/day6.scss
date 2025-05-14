@@ -1,0 +1,75 @@
+/* // delete the following line if no text is used
+// edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px; 
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.avatar, .picture {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.avatar::after {
+    content: "";
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    border: 2px solid black;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    border-color: #000 #000 #000 transparent;
+
+}
+
+.avatar::before{
+    content: "";
+    width: 76px;
+    height: 76px;
+    top: -2px;
+    left: -2px;
+    border-radius: 50%;
+    border: 2px solid black;
+    position: absolute;
+    border-color: #000 transparent #000 #000;
+
+}
+
+.avatar:hover::after, .avatar:hover::before {
+    animation: rotate 0.8s linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
