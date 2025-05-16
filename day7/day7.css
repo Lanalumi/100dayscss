@@ -29,7 +29,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: yellow;
+  background-color: #264057;
 }
 
 .menu {
@@ -44,7 +44,7 @@
   transition: transform 0.3s;
 }
 .menu.open {
-  transform: translate(-70%, -50%);
+  transform: translate(-75%, -50%);
 }
 .menu a {
   text-decoration: none;
@@ -181,7 +181,7 @@
   outline: 2px solid #fff;
 }
 .notification .line {
-  width: 20px;
+  width: 2px;
   height: 100%;
   background-color: #dedede;
   position: absolute;
