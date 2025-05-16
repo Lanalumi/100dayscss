@@ -9,33 +9,69 @@
 <body>
     <div class="frame">
         <div class="painel">
-            <div class="menu">
+            <nav class="menu" data-menu>
                 <ul class="list">   
-                    <li>
-                        <a>Dashboard</a>
+                    <li > 
+                        <a>
+                            <img src="./assets/icons/dashboard-icon.svg" width="20px" height="20px">
+                            Dashboard
+                        </a>
                     </li>
                     <li>
-                        <a>Profile</a>
+                        <a>
+                            <img src="./assets/icons/profile-icon.svg" width="20px" height="20px"> Profile</a>
                     </li>
                     <li>
-                        <a>Notifications</a>
+                        <a>
+                            <img src="./assets/icons/notifications-icon.svg" width="20px" height="20px"> Notifications</a>
                     </li>
                     <li>
-                        <a>Messages</a>
+                        <a>
+                            <img src="./assets/icons/messages-icon.svg" width="20px" height="20px"> Messages</a>
                     </li>
                     <li>
-                        <a>Settings</a>
+                        <a> <img src="./assets/icons/settings-icon.svg" width="20px" height="20px"> Settings</a>
                     </li>
                 </ul>
-            </div>
-            <div class="notifications">
-                <ul>
-                    <li>
+            </nav>
+            <section class="notifications" data-notifications>
+                <header class="header">
+                    <button class="menu-button" data-menu-button>
+                      <div class="line-wrapper">
+
+                        <div class="line"></div>
+                        <div class="circle"></div>
+                      </div>
+                        <div class="line"></div>
+                    </button>
+                      <h1 class="title">Notifications</h1>
+                      <div class="search">
+                        <input id="search" class="search-input" data-search-input name="search" aria-label="search" placeholder="search..."/>
+
+                        <label for="search" data-search-label>
+
+                          <img class="search-icon" src="./assets/icons/dashboard-icon.svg"
+                          >
+                        </label>
+                        </div>
+                </header>
+
+                <ul class="notifications-list">
+                    <li class="notification">
+                      <div class="circle">
+                        <span class="time">9:24 AM</span>
+                        <p class="text">
+                          <em class="user">Jhon Walker</em> posted a photo on your wall.
+                        </p>
+                      </div>
+                      <div class="line"></div>
                         
                     </li>
                 </ul>
-            </div>
+            </section>
         </div>
     </div>
+
+    <script src="./day7.js"></script>
 </body>
 </html>
