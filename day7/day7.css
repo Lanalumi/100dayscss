@@ -42,12 +42,23 @@
   top: 50%;
   transform: translate(-50%, -50%);
   transition: transform 0.3s;
+  background-color: #3c5870;
 }
 .menu.open {
   transform: translate(-75%, -50%);
 }
 .menu a {
   text-decoration: none;
+}
+
+.list-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  filter: contrast(0) brightness(5);
 }
 
 .list {
@@ -141,6 +152,7 @@
   width: 16px;
   height: 16px;
   cursor: pointer;
+  margin-top: 6px;
 }
 .search .search-input {
   border: none;

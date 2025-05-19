@@ -44,6 +44,7 @@
     top: 50%;
     transform: translate(-50%, -50%);
     transition: transform 0.3s;
+    background-color: #3c5870;
 
     &.open{
     transform: translate(-75%,-50%);  
@@ -54,7 +55,18 @@
         text-decoration: none;
     }
 
+    
 }   
+
+.list-link {
+    display:flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.icon {
+    filter: contrast(0) brightness(5);
+}
 
 .list {
     background-color: #3c5870;
@@ -152,7 +164,8 @@
     .search-icon {
         width: 16px;
         height: 16px;
-        cursor: pointer;
+        cursor: pointer; 
+        margin-top: 6px;
     }
 
     .search-input {
